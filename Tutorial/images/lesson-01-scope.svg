@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="280" viewBox="0 0 1300 280">
+  <defs>
+    <style>
+      .title { font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+      .label { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+      .small { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .box { rx: 14; ry: 14; stroke-width: 2; }
+      .covered { fill: #dcfce7; stroke: #16a34a; }
+      .external { fill: #f3f4f6; stroke: #94a3b8; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1300" height="280" fill="#fcfcfd"/>
+  <text x="40" y="36" class="title">完整 RAG 系统与当前仓库的职责边界</text>
+
+  <rect x="40" y="80" width="220" height="88" class="box covered"/>
+  <text x="150" y="115" text-anchor="middle" class="label">文档导入</text>
+  <text x="150" y="138" text-anchor="middle" class="small">当前仓库覆盖</text>
+
+  <rect x="290" y="80" width="240" height="88" class="box covered"/>
+  <text x="410" y="115" text-anchor="middle" class="label">文本切块与向量化</text>
+  <text x="410" y="138" text-anchor="middle" class="small">当前仓库覆盖</text>
+
+  <rect x="560" y="80" width="220" height="88" class="box covered"/>
+  <text x="670" y="115" text-anchor="middle" class="label">向量检索</text>
+  <text x="670" y="138" text-anchor="middle" class="small">当前仓库覆盖</text>
+
+  <rect x="810" y="80" width="220" height="88" class="box external"/>
+  <text x="920" y="115" text-anchor="middle" class="label">上下文组装</text>
+  <text x="920" y="138" text-anchor="middle" class="small">通常由上层应用负责</text>
+
+  <rect x="1060" y="80" width="200" height="88" class="box external"/>
+  <text x="1160" y="115" text-anchor="middle" class="label">LLM 生成答案</text>
+  <text x="1160" y="138" text-anchor="middle" class="small">通常由上层应用负责</text>
+
+  <line x1="260" y1="124" x2="290" y2="124" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="124" x2="560" y2="124" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="780" y1="124" x2="810" y2="124" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1030" y1="124" x2="1060" y2="124" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="205" width="350" height="42" rx="10" ry="10" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="215" y="231" text-anchor="middle" class="small">绿色：这个仓库负责的部分</text>
+
+  <rect x="420" y="205" width="350" height="42" rx="10" ry="10" fill="#f3f4f6" stroke="#94a3b8"/>
+  <text x="595" y="231" text-anchor="middle" class="small">灰色：通常由上层 RAG 应用补齐</text>
+</svg>

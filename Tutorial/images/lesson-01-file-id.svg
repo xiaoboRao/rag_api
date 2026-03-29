@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="330" viewBox="0 0 1100 330">
+  <defs>
+    <style>
+      .title { font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+      .label { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+      .small { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .box { rx: 14; ry: 14; stroke-width: 2; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="330" fill="#fcfcfd"/>
+  <text x="40" y="36" class="title">file_id 如何组织同一份文件的多个 Chunk</text>
+
+  <rect x="60" y="120" width="220" height="86" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="170" y="152" text-anchor="middle" class="label">原始文件</text>
+  <text x="170" y="175" text-anchor="middle" class="small">employee_handbook.pdf</text>
+
+  <rect x="390" y="40" width="260" height="62" class="box" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="520" y="67" text-anchor="middle" class="label">Chunk 1</text>
+  <text x="520" y="88" text-anchor="middle" class="small">file_id = file_001</text>
+
+  <rect x="390" y="128" width="260" height="62" class="box" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="520" y="155" text-anchor="middle" class="label">Chunk 2</text>
+  <text x="520" y="176" text-anchor="middle" class="small">file_id = file_001</text>
+
+  <rect x="390" y="216" width="260" height="62" class="box" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="520" y="243" text-anchor="middle" class="label">Chunk 3</text>
+  <text x="520" y="264" text-anchor="middle" class="small">file_id = file_001</text>
+
+  <path d="M280 150 C320 150, 340 70, 390 70" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M280 163 C330 163, 340 159, 390 159" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M280 176 C320 176, 340 250, 390 247" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="98" width="220" height="110" class="box" fill="#fef3c7" stroke="#d97706"/>
+  <text x="870" y="138" text-anchor="middle" class="label">向量库</text>
+  <text x="870" y="163" text-anchor="middle" class="small">所有 Chunk 一起存储</text>
+  <text x="870" y="186" text-anchor="middle" class="small">但都带同一个 file_id</text>
+
+  <line x1="650" y1="71" x2="760" y2="124" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="650" y1="159" x2="760" y2="153" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="650" y1="247" x2="760" y2="182" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="240" width="270" height="54" class="box" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="895" y="272" text-anchor="middle" class="label">查询时按 file_id = file_001 过滤</text>
+</svg>

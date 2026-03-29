@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="270" viewBox="0 0 1400 270">
+  <defs>
+    <style>
+      .title { font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+      .label { font: 600 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2937; }
+      .small { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .box { rx: 14; ry: 14; stroke-width: 2; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="270" fill="#fcfcfd"/>
+  <text x="40" y="36" class="title">RAG 最小工作流程</text>
+
+  <rect x="40" y="90" width="150" height="64" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="115" y="118" text-anchor="middle" class="label">原始文档</text>
+  <text x="115" y="138" text-anchor="middle" class="small">Documents</text>
+
+  <rect x="220" y="90" width="160" height="64" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="300" y="118" text-anchor="middle" class="label">文本提取</text>
+  <text x="300" y="138" text-anchor="middle" class="small">Extract Text</text>
+
+  <rect x="410" y="90" width="160" height="64" class="box" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="490" y="118" text-anchor="middle" class="label">文本切块</text>
+  <text x="490" y="138" text-anchor="middle" class="small">Chunking</text>
+
+  <rect x="600" y="90" width="180" height="64" class="box" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="690" y="118" text-anchor="middle" class="label">生成文档向量</text>
+  <text x="690" y="138" text-anchor="middle" class="small">Document Embedding</text>
+
+  <rect x="810" y="90" width="160" height="64" class="box" fill="#fef3c7" stroke="#d97706"/>
+  <text x="890" y="118" text-anchor="middle" class="label">写入向量库</text>
+  <text x="890" y="138" text-anchor="middle" class="small">Vector Store</text>
+
+  <rect x="520" y="190" width="180" height="54" class="box" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="610" y="221" text-anchor="middle" class="label">用户问题</text>
+
+  <rect x="740" y="190" width="180" height="54" class="box" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="830" y="221" text-anchor="middle" class="label">生成问题向量</text>
+
+  <rect x="1000" y="90" width="160" height="64" class="box" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="1080" y="118" text-anchor="middle" class="label">相似度检索</text>
+  <text x="1080" y="138" text-anchor="middle" class="small">Similarity Search</text>
+
+  <rect x="1190" y="90" width="170" height="64" class="box" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="1275" y="118" text-anchor="middle" class="label">返回相关片段</text>
+  <text x="1275" y="138" text-anchor="middle" class="small">Retrieved Chunks</text>
+
+  <line x1="190" y1="122" x2="220" y2="122" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="380" y1="122" x2="410" y2="122" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="570" y1="122" x2="600" y2="122" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="780" y1="122" x2="810" y2="122" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="970" y1="122" x2="1000" y2="122" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1160" y1="122" x2="1190" y2="122" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <line x1="700" y1="217" x2="740" y2="217" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="920" y1="217" x2="1000" y2="145" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="890" y1="154" x2="1000" y2="154" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)"/>
+</svg>
