@@ -1,0 +1,27 @@
+name: Notify AI Learning Lab
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - Tutorial/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger AI Learning Lab rebuild
+        env:
+          GH_TOKEN: ${{ secrets.AI_LEARNING_LAB_TRIGGER_TOKEN }}
+        run: |
+          gh api repos/xiaoboRao/ai-learning-lab/dispatches \
+            --method POST \
+            -f event_type='rag_api_tutorial_updated' \
+            -f client_payload[source_repo]="${{ github.repository }}" \
+            -f client_payload[source_sha]="${{ github.sha }}"
